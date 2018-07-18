@@ -92,7 +92,3 @@ let vim_markdown_preview_browser='firefox'
 map <C-S> :setlocal spell! spelllang=en_us<CR>
 map <C-n> :NERDTreeFocus<CR>
 nnoremap ; :
-
-" set runtimepath^=~/.vim runtimepath+=~/.vim/after
-" let &packpath = &runtimepath
-" source ~/.vimrc
