@@ -42,10 +42,14 @@ set expandtab
 
 " colorscheme for editor and airline bar
 colorscheme Brogrammer
-let g:airline_theme='base16_summerfruit'
+let g:airline_theme='tomorrow'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline']
+
+" Set python providers
+let g:python_host_prog='/usr/local/bin/python'
+let g:python3_host_prog='/usr/local/bin/python3'
 
 " javascript autocompletion
 let g:javascript_plugin_jsdoc = 1
