@@ -11,6 +11,7 @@ Plug	'easymotion/vim-easymotion'
 Plug	'tpope/vim-fugitive'
 Plug	'tpope/vim-git'
 Plug	'pangloss/vim-javascript'
+Plug  'mxw/vim-jsx'
 Plug	'tpope/vim-surround'
 Plug	'jreybert/vimagit'
 Plug	'vim-scripts/SearchComplete'
@@ -82,8 +83,18 @@ let vim_markdown_preview_browser='firefox'
 " Key mappings
 " Spell Check
 map <C-S> :setlocal spell! spelllang=en_us<CR>
+
+" Easy Motion bindings
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 " Makes semi-colon into a colon
 nnoremap ; :
+
 " Easer pane navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
