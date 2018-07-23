@@ -32,6 +32,7 @@ set clipboard=unnamed " alows for universal copy and paste
 set nu " lines numbers
 set mouse=a " enables mouse to click on files
 set guicursor= " makes cursor default to the profile settings
+set termguicolors
 
 " makes tab 2 spaces
 set tabstop=2
@@ -40,10 +41,8 @@ set softtabstop=2
 set expandtab
 
 " colorscheme for editor and airline bar
-colorscheme delek
-set fillchars+=vert:\ 
-hi VertSplit guifg=#181818 guibg=#181818 guisp=#181818 gui=NONE ctermfg=255 ctermbg=235 cterm=NONE
-let g:airline_theme='murmur'
+colorscheme Brogrammer
+let g:airline_theme='base16_summerfruit'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline']
@@ -74,5 +73,4 @@ let vim_markdown_preview_browser='firefox'
 
 " Key mappings
 map <C-S> :setlocal spell! spelllang=en_us<CR>
-map <C-n> :NERDTreeFocus<CR>
 nnoremap ; :
