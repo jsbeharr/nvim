@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug  'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug	'davidhalter/jedi-vim'
-Plug	'scrooloose/nerdtree'
 Plug	'leafgarland/typescript-vim'
 Plug	'vim-airline/vim-airline-themes'
 Plug	'vim-airline/vim-airline'
@@ -20,25 +19,10 @@ Plug	'airblade/vim-gitgutter'
 Plug	'ap/vim-css-color'
 Plug	'JamshedVesuna/vim-markdown-preview'
 Plug	'ryanoasis/vim-devicons'
-Plug	'Xuyuanp/nerdtree-git-plugin'
-Plug	'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug	'ternjs/tern_for_vim'
 Plug	'moll/vim-node'
 
 call plug#end()
-
-" NerdTree Settings
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1 
-" Automatically enters NerdTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"Closes vim if only window left is NerdTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Syntax Highlighting
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
 
 " utility settings
 set t_Co=256 " fixes coloring issues
