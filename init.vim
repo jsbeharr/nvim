@@ -34,6 +34,10 @@ set mouse=a " enables mouse to click on files
 set guicursor= " makes cursor default to the profile settings
 set termguicolors
 
+" Create panes to the right and bottom
+set splitbelow
+set splitright
+
 " makes tab 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -76,5 +80,12 @@ let vim_markdown_preview_browser='firefox'
 " let vim_markdown_preview_temp_file=1
 
 " Key mappings
+" Spell Check
 map <C-S> :setlocal spell! spelllang=en_us<CR>
+" Makes semi-colon into a colon
 nnoremap ; :
+" Easer pane navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
