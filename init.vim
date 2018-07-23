@@ -33,7 +33,8 @@ set clipboard=unnamed " alows for universal copy and paste
 set nu " lines numbers
 set mouse=a " enables mouse to click on files
 set guicursor= " makes cursor default to the profile settings
-set termguicolors
+set termguicolors " sets coloring based on themes
+let g:netrw_dirhistmax=0 " stops writing to history file
 
 " Create panes to the right and bottom
 set splitbelow
