@@ -28,7 +28,6 @@ call plug#end()
 " utility settings
 set t_Co=256 " fixes coloring issues
 set encoding=utf8 " devicons plugin
-set guifont=hack:h11 " sets font to hack
 set clipboard=unnamed " alows for universal copy and paste
 set nu " lines numbers
 set mouse=a " enables mouse to click on files
