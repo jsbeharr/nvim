@@ -1,7 +1,7 @@
 " Install Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug  'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug    'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug	'davidhalter/jedi-vim'
 Plug	'leafgarland/typescript-vim'
 Plug	'vim-airline/vim-airline-themes'
