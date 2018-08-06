@@ -45,6 +45,12 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" netrw configuration
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 2
+let g:netrw_winsize = 25
+
 " colorscheme for editor and airline bar
 colorscheme Brogrammer
 let g:airline_theme='tomorrow'
