@@ -1,7 +1,7 @@
 " Install Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug  'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug  'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 Plug	'davidhalter/jedi-vim'
 Plug	'leafgarland/typescript-vim'
 Plug	'vim-airline/vim-airline-themes'
@@ -39,17 +39,18 @@ let g:netrw_dirhistmax=0 " stops writing to history file
 set splitbelow
 set splitright
 
+" Git Gutter delay Time
+set updatetime=100
+
 " makes tab 2 spaces
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-" netrw configuration
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 2
-let g:netrw_winsize = 25
+" Autocompletion menu color
+hi Pmenu ctermbg=grey ctermfg=white
+hi PmenuSel ctermbg=blue ctermfg=white
 
 " colorscheme for editor and airline bar
 colorscheme Brogrammer
@@ -58,9 +59,18 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline']
 
+" netrw configuration
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 2
+let g:netrw_winsize = 25
+
 " Set python providers
 let g:python_host_prog='/usr/local/bin/python'
 let g:python3_host_prog='/usr/local/bin/python3'
+
+" Sets YCM Python to virtualenv if it exists
+let g:ycm_python_binary_path = 'python'
 
 " javascript autocompletion
 let g:javascript_plugin_jsdoc = 1
@@ -70,13 +80,6 @@ autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " C language completion
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-
-" Autocompletion menu color
-hi Pmenu ctermbg=grey ctermfg=white
-hi PmenuSel ctermbg=blue ctermfg=white
-
-" Git Gutter delay Time
-set updatetime=100
 
 " Markdown Preview
 " <C-p> to launch preview
