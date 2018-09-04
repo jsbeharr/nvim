@@ -1,7 +1,7 @@
 " Install Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug  'Valloric/YouCompleteMe', { 'do': './install.py --all' }
+Plug  'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
 Plug	'davidhalter/jedi-vim'
 Plug	'leafgarland/typescript-vim'
 Plug	'vim-airline/vim-airline-themes'
@@ -32,15 +32,9 @@ set clipboard=unnamed " alows for universal copy and paste
 set nu " lines numbers
 set mouse=a " enables mouse to click on files
 set guicursor= " makes cursor default to the profile settings
+set splitright " Create panes to the right
 set termguicolors " sets coloring based on themes
-let g:netrw_dirhistmax=0 " stops writing to history file
-
-" Create panes to the right and bottom
-set splitbelow
-set splitright
-
-" Git Gutter delay Time
-set updatetime=100
+set updatetime=100 " Git Gutter delay Time
 
 " makes tab 2 spaces
 set tabstop=2
@@ -64,6 +58,7 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 25
+let g:netrw_dirhistmax=0 " stops writing to history file
 
 " Set python providers
 let g:python_host_prog='/usr/local/bin/python'
@@ -79,15 +74,12 @@ let g:javascript_plugin_ngdoc = 1
 autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " C language completion
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 " Markdown Preview
 " <C-p> to launch preview
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='firefox'
-" Un-Comment in no internet connection is available
-" let vim_markdown_preview_toggle=1
-" let vim_markdown_preview_temp_file=1
 
 " Key mappings
 " Spell Check
