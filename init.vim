@@ -74,7 +74,7 @@ let g:javascript_plugin_ngdoc = 1
 autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " C language completion
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_extra_conf.py'
 
 " Markdown Preview
 " <C-p> to launch preview
