@@ -1,7 +1,7 @@
 " Install Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug  'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
+Plug  'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer --js-completer' }
 Plug	'davidhalter/jedi-vim'
 Plug	'leafgarland/typescript-vim'
 Plug	'vim-airline/vim-airline-themes'
@@ -14,12 +14,9 @@ Plug	'pangloss/vim-javascript'
 Plug  'mxw/vim-jsx'
 Plug	'tpope/vim-surround'
 Plug	'jreybert/vimagit'
-Plug	'vim-scripts/SearchComplete'
 Plug	'dag/vim-fish'
 Plug	'airblade/vim-gitgutter'
 Plug	'ap/vim-css-color'
-Plug	'JamshedVesuna/vim-markdown-preview'
-Plug	'ryanoasis/vim-devicons'
 Plug	'ternjs/tern_for_vim'
 Plug	'moll/vim-node'
 
@@ -61,8 +58,8 @@ let g:netrw_winsize = 25
 let g:netrw_dirhistmax=0 " stops writing to history file
 
 " Set python providers
-let g:python_host_prog='/usr/local/bin/python'
-let g:python3_host_prog='/usr/local/bin/python3'
+let g:python_host_prog='/usr/bin/python2'
+let g:python3_host_prog='/usr/bin/python3'
 
 " Sets YCM Python to virtualenv if it exists
 let g:ycm_python_binary_path = 'python'
@@ -74,12 +71,10 @@ let g:javascript_plugin_ngdoc = 1
 autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " C language completion
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 " Markdown Preview
-" <C-p> to launch preview
-let vim_markdown_preview_github=1
-let vim_markdown_preview_browser='firefox'
+autocmd BufEnter *.md exe 'noremap <C-P> :!brave % > /dev/null 2>/dev/null :p<CR>'
 
 " Key mappings
 " Spell Check
