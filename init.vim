@@ -18,6 +18,7 @@ Plug	'dag/vim-fish'
 Plug	'airblade/vim-gitgutter'
 Plug	'ap/vim-css-color'
 Plug	'ternjs/tern_for_vim'
+Plug  'w0rp/ale'
 Plug	'moll/vim-node'
 
 call plug#end()
@@ -25,13 +26,14 @@ call plug#end()
 " utility settings
 set t_Co=256 " fixes coloring issues
 set encoding=utf8 " devicons plugin
-set clipboard=unnamed " alows for universal copy and paste
+set clipboard=unnamed " allows for universal copy and paste
 set nu " lines numbers
 set mouse=a " enables mouse to click on files
 set guicursor= " makes cursor default to the profile settings
 set splitright " Create panes to the right
 set termguicolors " sets coloring based on themes
 set updatetime=100 " Git Gutter delay Time
+set nofixendofline
 
 " makes tab 2 spaces
 set tabstop=2
@@ -72,9 +74,6 @@ autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " C language completion
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
-" Markdown Preview
-autocmd BufEnter *.md exe 'noremap <C-P> :!brave % > /dev/null 2>/dev/null :p<CR>'
 
 " Key mappings
 " Spell Check
