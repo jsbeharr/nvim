@@ -62,7 +62,7 @@ let g:netrw_dirhistmax=0 " stops writing to history file
 
 " Set python providers
 let g:python_host_prog='/usr/local/bin/python'
-let g:python3_host_prog='/usr/local/bin/python3'
+let g:python3_host_prog='/usr/local/bin/python3.6'
 
 " Sets YCM Python to virtualenv if it exists
 let g:ycm_python_binary_path = 'python'
