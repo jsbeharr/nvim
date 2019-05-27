@@ -39,7 +39,7 @@ set nofixendofline
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
+set noexpandtab
 
 " Autocompletion menu color
 hi Pmenu ctermbg=grey ctermfg=white
@@ -71,9 +71,10 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 " enhance YCM JS completion with tern's smarts
 autocmd FileType javascript setlocal omnifunc=tern#Complete
+let b:ale_linters = ['eslint']
 
 " C language completion
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_extra_conf.py'
 
 " Key mappings
 " Spell Check
